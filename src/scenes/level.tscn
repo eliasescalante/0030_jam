@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2pn7v1vlw03l"]
+
+[ext_resource type="Script" uid="uid://bfs6sglhmw3l1" path="res://src/scripts/level.gd" id="1_50nvp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50nvp"]
+bg_color = Color(0.6, 0.07058824, 0.07058824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7racn"]
+bg_color = Color(0.3341807, 0.6937383, 0.3502368, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1iog"]
+bg_color = Color(0.05490196, 0.09803922, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikp8s"]
+bg_color = Color(0.62785405, 0.62219644, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jxoh"]
+bg_color = Color(0.51862377, 0.32696536, 0.14064741, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7qev"]
+bg_color = Color(0.6, 0.05490196, 0.6, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wq10o"]
+font_size = 50
+font_color = Color(0.96474224, 0.96474224, 0.9647421, 1)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_50nvp")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -47.0
+offset_top = -33.0
+offset_right = 1162.0
+offset_bottom = 661.0
+color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="ButtonRed" type="Button" parent="Buttons"]
+offset_left = 193.0
+offset_top = 307.0
+offset_right = 392.0
+offset_bottom = 418.0
+theme_override_colors/font_outline_color = Color(0.81960785, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.28627452, 0.03137255, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_50nvp")
+
+[node name="ButtonGreen" type="Button" parent="Buttons"]
+offset_left = 466.0
+offset_top = 308.0
+offset_right = 663.0
+offset_bottom = 419.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7racn")
+
+[node name="ButtonBlue" type="Button" parent="Buttons"]
+offset_left = 742.0
+offset_top = 307.0
+offset_right = 940.0
+offset_bottom = 420.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_w1iog")
+
+[node name="ButtonYellow" type="Button" parent="Buttons"]
+offset_left = 196.0
+offset_top = 448.0
+offset_right = 391.0
+offset_bottom = 557.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ikp8s")
+
+[node name="ButtonBrown" type="Button" parent="Buttons"]
+offset_left = 467.0
+offset_top = 446.0
+offset_right = 667.0
+offset_bottom = 554.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5jxoh")
+
+[node name="ButtonViolette" type="Button" parent="Buttons"]
+offset_left = 743.0
+offset_top = 451.0
+offset_right = 943.0
+offset_bottom = 559.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_n7qev")
+
+[node name="UX" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="UX"]
+offset_left = 483.0
+offset_top = 78.0
+offset_right = 733.0
+offset_bottom = 191.0
+text = "000
+"
+label_settings = SubResource("LabelSettings_wq10o")
+
+[connection signal="pressed" from="Buttons/ButtonRed" to="." method="_on_button_red_pressed"]
+[connection signal="pressed" from="Buttons/ButtonGreen" to="." method="_on_button_green_pressed"]
+[connection signal="pressed" from="Buttons/ButtonBlue" to="." method="_on_button_blue_pressed"]
+[connection signal="pressed" from="Buttons/ButtonYellow" to="." method="_on_button_yellow_pressed"]
+[connection signal="pressed" from="Buttons/ButtonBrown" to="." method="_on_button_brown_pressed"]
+[connection signal="pressed" from="Buttons/ButtonViolette" to="." method="_on_button_violette_pressed"]
