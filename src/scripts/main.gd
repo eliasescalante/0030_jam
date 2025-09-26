@@ -1,20 +1,21 @@
 extends Node2D
 
-
+@onready var animacion = $AnimationPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	animacion.playback_active = true
+	animacion.play("fondito")
+	print(animacion.is_playing()) # debería decir "true"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/scenes/level.tscn")
-	pass # Replace with function body.
-
 
 func _on_quit_button_up() -> void:
 	get_tree().quit()
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/scenes/credits.tscn")

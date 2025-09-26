@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2pn7v1vlw03l"]
+[gd_scene load_steps=11 format=3 uid="uid://d2pn7v1vlw03l"]
 
 [ext_resource type="Script" uid="uid://bfs6sglhmw3l1" path="res://src/scripts/level.gd" id="1_50nvp"]
+[ext_resource type="FontFile" uid="uid://cxwxe72qbdhqw" path="res://src/assets/LuFont-Regular.otf" id="2_7racn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50nvp"]
 bg_color = Color(0.6, 0.07058824, 0.07058824, 1)
@@ -21,8 +22,13 @@ bg_color = Color(0.51862377, 0.32696536, 0.14064741, 1)
 bg_color = Color(0.6, 0.05490196, 0.6, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wq10o"]
-font_size = 50
+font = ExtResource("2_7racn")
+font_size = 100
 font_color = Color(0.96474224, 0.96474224, 0.9647421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1iog"]
+font = ExtResource("2_7racn")
+font_size = 150
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_50nvp")
@@ -37,59 +43,68 @@ color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="ButtonRed" type="Button" parent="Buttons"]
-offset_left = 193.0
-offset_top = 307.0
-offset_right = 392.0
-offset_bottom = 418.0
+offset_left = 188.0
+offset_top = 364.0
+offset_right = 387.0
+offset_bottom = 475.0
 theme_override_colors/font_outline_color = Color(0.81960785, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(1, 0.28627452, 0.03137255, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_50nvp")
 
 [node name="ButtonGreen" type="Button" parent="Buttons"]
-offset_left = 466.0
-offset_top = 308.0
-offset_right = 663.0
-offset_bottom = 419.0
+offset_left = 461.0
+offset_top = 365.0
+offset_right = 658.0
+offset_bottom = 476.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_7racn")
 
 [node name="ButtonBlue" type="Button" parent="Buttons"]
-offset_left = 742.0
-offset_top = 307.0
-offset_right = 940.0
-offset_bottom = 420.0
+offset_left = 737.0
+offset_top = 364.0
+offset_right = 935.0
+offset_bottom = 477.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_w1iog")
 
 [node name="ButtonYellow" type="Button" parent="Buttons"]
-offset_left = 196.0
-offset_top = 448.0
-offset_right = 391.0
-offset_bottom = 557.0
+offset_left = 191.0
+offset_top = 505.0
+offset_right = 386.0
+offset_bottom = 614.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ikp8s")
 
 [node name="ButtonBrown" type="Button" parent="Buttons"]
-offset_left = 467.0
-offset_top = 446.0
-offset_right = 667.0
-offset_bottom = 554.0
+offset_left = 462.0
+offset_top = 503.0
+offset_right = 662.0
+offset_bottom = 611.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5jxoh")
 
 [node name="ButtonViolette" type="Button" parent="Buttons"]
-offset_left = 743.0
-offset_top = 451.0
-offset_right = 943.0
-offset_bottom = 559.0
+offset_left = 738.0
+offset_top = 508.0
+offset_right = 938.0
+offset_bottom = 616.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_n7qev")
 
 [node name="UX" type="Node2D" parent="."]
 
 [node name="Label" type="Label" parent="UX"]
-offset_left = 483.0
-offset_top = 78.0
-offset_right = 733.0
-offset_bottom = 191.0
-text = "000
-"
+offset_left = 150.0
+offset_top = 194.0
+offset_right = 1002.0
+offset_bottom = 328.0
+text = "000"
 label_settings = SubResource("LabelSettings_wq10o")
+horizontal_alignment = 1
+
+[node name="time" type="Label" parent="UX"]
+offset_left = 287.0
+offset_top = -24.0
+offset_right = 843.0
+offset_bottom = 127.0
+text = "time"
+label_settings = SubResource("LabelSettings_w1iog")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Buttons/ButtonRed" to="." method="_on_button_red_pressed"]
 [connection signal="pressed" from="Buttons/ButtonGreen" to="." method="_on_button_green_pressed"]

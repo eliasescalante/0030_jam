@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://f0v5uruhacmp"]
+[gd_scene load_steps=13 format=3 uid="uid://f0v5uruhacmp"]
 
 [ext_resource type="Script" uid="uid://m6c8dpymdopv" path="res://src/scripts/win_lose.gd" id="1_7ijsn"]
+[ext_resource type="Texture2D" uid="uid://cpkj3i5j1tep2" path="res://src/assets/fondo portada 2.png" id="2_jrjj4"]
+[ext_resource type="Texture2D" uid="uid://dhua5oq81jfek" path="res://src/assets/fondo del menu.png" id="2_nppv5"]
+[ext_resource type="Texture2D" uid="uid://b3tm3rc3qkodp" path="res://src/assets/asset de iu.png" id="4_svy6j"]
+[ext_resource type="FontFile" uid="uid://cxwxe72qbdhqw" path="res://src/assets/LuFont-Regular.otf" id="4_w00u2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jrjj4"]
 font_size = 50
@@ -14,14 +18,35 @@ font_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
 font_size = 50
 font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w00u2"]
+texture = ExtResource("4_svy6j")
+region_rect = Rect2(771.94336, 77.00548, 523.4646, 186.35161)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ej6ld"]
+texture = ExtResource("4_svy6j")
+region_rect = Rect2(771.6942, 550.98486, 520.9794, 175.75208)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdsfs"]
+texture = ExtResource("4_svy6j")
+region_rect = Rect2(768.5558, 86.49721, 524.1178, 178.89049)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guia7"]
+texture = ExtResource("4_svy6j")
+region_rect = Rect2(774.83264, 547.84644, 517.84094, 185.16736)
+
 [node name="WinLose" type="Node2D"]
 script = ExtResource("1_7ijsn")
 
-[node name="Background" type="ColorRect" parent="."]
-offset_left = -53.0
-offset_top = -31.0
-offset_right = 1213.0
-offset_bottom = 709.0
+[node name="FondoDelMenu" type="Sprite2D" parent="."]
+position = Vector2(569.75006, 321)
+scale = Vector2(0.59505206, 0.6018518)
+texture = ExtResource("2_nppv5")
+
+[node name="FondoPortada2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.43137255)
+position = Vector2(562.8125, 258)
+scale = Vector2(0.25579637, 0.14310148)
+texture = ExtResource("2_jrjj4")
 
 [node name="LabelHits" type="Label" parent="."]
 offset_left = 534.0
@@ -50,21 +75,27 @@ label_settings = SubResource("LabelSettings_nppv5")
 [node name="ux" type="Node2D" parent="."]
 
 [node name="PLAY" type="Button" parent="ux"]
-offset_left = 346.99997
-offset_top = 410.99997
-offset_right = 496.296
-offset_bottom = 494.62906
-rotation = 0.41824684
-theme_override_font_sizes/font_size = 50
+offset_left = 263.0
+offset_top = 514.0
+offset_right = 499.00003
+offset_bottom = 602.0
+theme_override_colors/font_color = Color(0.8745098, 0.015686275, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("4_w00u2")
+theme_override_font_sizes/font_size = 87
+theme_override_styles/normal = SubResource("StyleBoxTexture_w00u2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ej6ld")
 text = "PLAY"
 
 [node name="CREDITS" type="Button" parent="ux"]
-offset_left = 597.00006
-offset_top = 524.0
-offset_right = 754.583
-offset_bottom = 608.6608
-rotation = -0.42198706
+offset_left = 605.0
+offset_top = 517.0
+offset_right = 946.0
+offset_bottom = 601.6608
+theme_override_colors/font_color = Color(0.8745098, 0.05490196, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("4_w00u2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_gdsfs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_guia7")
 text = "Credits
 "
 

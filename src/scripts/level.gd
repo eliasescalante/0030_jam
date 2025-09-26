@@ -6,11 +6,24 @@ var colors = ["red", "green", "blue", "yellow", "brown", "violette"]
 var score_hits := 0
 var score_misses := 0
 var game_time := 30.0 # segundos
+var time_left: float
+
 
 
 func _ready():
+	time_left = game_time
 	start_game()
 	start_timer()
+
+func _process(delta: float) -> void:
+	if time_left > 0:
+		time_left -= delta
+		$UX/time.text = str(round(time_left))
+		if time_left < 0:
+			time_left = 0
+			$UX/time.text = str(round(time_left))
+	else:
+		end_game()
 
 func start_game():
 	sequence.clear()
@@ -24,12 +37,12 @@ func add_new_step():
 
 func show_sequence() -> void:
 	player_input.clear()
-	$UX/Label.text = "Simón dice..."
+	$UX/Label.text = "RECUERDA BIEN..."
 	await get_tree().create_timer(1).timeout
 	for color_id in sequence:
 		await highlight_button(color_id)
 		await get_tree().create_timer(0.4).timeout
-	$UX/Label.text = "Tu turno"
+	$UX/Label.text = "TU TURNO"
 
 func highlight_button(color_id: int) -> void:
 	var button = get_button_by_id(color_id)
@@ -59,17 +72,25 @@ func handle_input(id: int):
 	var index = player_input.size() - 1
 	
 	if index >= sequence.size():
-		$UX/Label.text = "¡Fallaste!"
+		$UX/Label.text = "¡FALLASTE!"
 		GameState.misses += 1
+		# Reinicia solo si es la primera instrucción
+		if sequence.size() == 1:
+			await get_tree().create_timer(1).timeout
+			get_tree().reload_current_scene()
 		return
 	
 	if player_input[index] != sequence[index]:
-		$UX/Label.text = "¡Fallaste!"
+		$UX/Label.text = "¡FALLASTE!"
 		GameState.misses += 1
+		# Reinicia solo si es la primera instrucción
+		if sequence.size() == 1:
+			await get_tree().create_timer(1).timeout
+			get_tree().reload_current_scene()
 		return
 
 	if player_input.size() == sequence.size():
-		$UX/Label.text = "¡Bien hecho!"
+		$UX/Label.text = "¡ACERTASTE!"
 		GameState.hits += 1
 		await get_tree().create_timer(1).timeout
 		add_new_step()
