@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d2pn7v1vlw03l"]
+[gd_scene load_steps=28 format=3 uid="uid://d2pn7v1vlw03l"]
 
 [ext_resource type="Script" uid="uid://bfs6sglhmw3l1" path="res://src/scripts/level.gd" id="1_50nvp"]
 [ext_resource type="Texture2D" uid="uid://cjsjhc1v1hjhf" path="res://src/assets/cartas 1.png" id="2_w1iog"]
@@ -9,81 +9,85 @@
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(102.42446, 100.92146, 310.98978, 376.6115)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0kndr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e28xj"]
 texture = ExtResource("3_ikp8s")
-region_rect = Rect2(100.07007, 99.050446, 313.84308, 379.75018)
+region_rect = Rect2(103.30768, 106.61539, 307.89746, 372.20514)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0kndr"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(102.424, 100.921, 310.99, 376.612)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jxoh"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(805.93146, 99.19367, 308.13666, 379.46463)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fp6li"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(806.21704, 102.18887, 310.7047, 376.61176)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(805.931, 99.194, 308.137, 379.465)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7qev"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(1513.5046, 101.48702, 308.12207, 376.5991)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7kkt"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(1509.2257, 105.3273, 310.7047, 373.47333)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1513.505, 101.487, 308.122, 376.599)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e32pt"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(449.29175, 102.04679, 313.84296, 376.6115)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ws5a7"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(451.57434, 95.912, 310.7047, 386.02704)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(449.292, 102.047, 313.843, 376.612)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hkhm5"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(1154.0117, 104.899895, 316.69604, 370.90524)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3y2hn"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(1157.7214, 102.18887, 313.84314, 376.61176)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1154.012, 104.9, 316.696, 370.905)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7mpk"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(98.90268, 535.84534, 313.60727, 381.98975)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lohkn"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(100.07007, 541.5692, 310.70465, 379.75024)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(98.903, 535.845, 313.607, 381.99)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1iog"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(439.79297, 527.07043, 337.97766, 406.33276)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u68jd"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(451.57434, 541.5692, 310.7047, 376.61182)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(439.793, 527.07, 337.978, 406.333)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g67j4"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(802.0172, 535.4549, 315.9652, 382.8886)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cs01n"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(806.21704, 541.5692, 310.7047, 376.61182)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(802.017, 535.455, 315.965, 382.889)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6nv3x"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(1148.3062, 535.29236, 329.53528, 392.30396)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvmrh"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(1151.4446, 535.29236, 316.98157, 386.0271)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1148.306, 535.292, 329.535, 392.304)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7auq"]
 texture = ExtResource("2_w1iog")
 region_rect = Rect2(1506.0873, 538.4308, 313.84314, 379.75024)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nelsi"]
-texture = ExtResource("3_ikp8s")
-region_rect = Rect2(1515.5026, 541.5692, 307.56628, 376.61182)
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1506.087, 538.431, 313.843, 379.75)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wq10o"]
 font = ExtResource("4_ikp8s")
@@ -114,6 +118,7 @@ offset_bottom = 428.0
 theme_override_colors/font_outline_color = Color(0.81960785, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(1, 0.28627452, 0.03137255, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_ikp8s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e28xj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0kndr")
 
 [node name="ButtonGreen" type="Button" parent="Buttons"]

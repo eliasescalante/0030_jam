@@ -58,16 +58,18 @@ offset_right = 862.0
 offset_bottom = 348.0
 text = "0"
 label_settings = SubResource("LabelSettings_jrjj4")
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LabelMisses" type="Label" parent="."]
 offset_left = 304.0
 offset_top = 329.0
-offset_right = 806.0
+offset_right = 864.0
 offset_bottom = 467.0
 text = "0"
 label_settings = SubResource("LabelSettings_pxpl3")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TItulo" type="Label" parent="."]
 offset_left = 398.0

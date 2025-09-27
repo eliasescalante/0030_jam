@@ -101,20 +101,22 @@ func handle_input(id: int):
 		$UX/Label.text = "FALLASTE"
 		AudioManager.play_sfx_no()
 		GameState.misses += 1
-		# Reinicia solo si es la primera instrucción
-		if sequence.size() == 1:
-			await get_tree().create_timer(1).timeout
-			get_tree().reload_current_scene()
+		await get_tree().create_timer(1).timeout
+		
+		#if sequence.size() == 1:
+		player_input.clear()
+		show_sequence()
 		return
 	
 	if player_input[index] != sequence[index]:
 		$UX/Label.text = "FALLASTE"
 		AudioManager.play_sfx_no()
 		GameState.misses += 1
+		await get_tree().create_timer(1).timeout
 		# Reinicia solo si es la primera instrucción
-		if sequence.size() == 1:
-			await get_tree().create_timer(1).timeout
-			get_tree().reload_current_scene()
+		#if sequence.size() == 1:
+		player_input.clear()
+		show_sequence()
 		return
 
 	if player_input.size() == sequence.size():

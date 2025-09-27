@@ -9,6 +9,7 @@ func _process(delta: float) -> void:
 		AudioManager.play_win()
 		
 func _on_play_pressed() -> void:
+	AudioManager.stop_win()
 	get_tree().change_scene_to_file("res://src/scenes/level.tscn")
 
 func _on_credits_pressed() -> void:
