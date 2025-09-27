@@ -1,7 +1,26 @@
-[gd_scene format=3 uid="uid://cpubttk6ty5uu"]
+[gd_scene load_steps=6 format=3 uid="uid://cpubttk6ty5uu"]
+
+[ext_resource type="AudioStream" uid="uid://prs0kxwn7cgi" path="res://src/assets/nivel doodles.wav" id="1_vlde7"]
+[ext_resource type="Script" uid="uid://d30hgykpg7s3n" path="res://src/scripts/AudioManager.gd" id="2_xhd1i"]
+[ext_resource type="AudioStream" uid="uid://dwgq8o63w87n2" path="res://src/assets/no.wav" id="2_yrmir"]
+[ext_resource type="AudioStream" uid="uid://dl0p3ph8w2rk1" path="res://src/assets/si.wav" id="3_ht8ya"]
+[ext_resource type="AudioStream" uid="uid://bqsvhtiya687c" path="res://src/assets/menu y win.mp3" id="5_ht8ya"]
 
 [node name="AudioManager" type="Node2D"]
+script = ExtResource("2_xhd1i")
 
 [node name="sfx" type="Node2D" parent="."]
 
+[node name="No" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("2_yrmir")
+
+[node name="Si" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("3_ht8ya")
+
 [node name="temas" type="Node2D" parent="."]
+
+[node name="NivelDoodles" type="AudioStreamPlayer" parent="temas"]
+stream = ExtResource("1_vlde7")
+
+[node name="MenuYWin" type="AudioStreamPlayer" parent="temas"]
+stream = ExtResource("5_ht8ya")

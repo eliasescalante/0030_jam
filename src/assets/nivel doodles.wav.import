@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://prs0kxwn7cgi"
+path="res://.godot/imported/nivel doodles.wav-2c2be7eec25efad264d1781eef2cf2e0.sample"
+
+[deps]
+
+source_file="res://src/assets/nivel doodles.wav"
+dest_files=["res://.godot/imported/nivel doodles.wav-2c2be7eec25efad264d1781eef2cf2e0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

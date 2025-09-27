@@ -1,98 +1,200 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2pn7v1vlw03l"]
+[gd_scene load_steps=27 format=3 uid="uid://d2pn7v1vlw03l"]
 
 [ext_resource type="Script" uid="uid://bfs6sglhmw3l1" path="res://src/scripts/level.gd" id="1_50nvp"]
-[ext_resource type="FontFile" uid="uid://cxwxe72qbdhqw" path="res://src/assets/LuFont-Regular.otf" id="2_7racn"]
+[ext_resource type="Texture2D" uid="uid://cjsjhc1v1hjhf" path="res://src/assets/cartas 1.png" id="2_w1iog"]
+[ext_resource type="Texture2D" uid="uid://bgjd2updmnchr" path="res://src/assets/cartas2.png" id="3_ikp8s"]
+[ext_resource type="FontFile" uid="uid://860eh15aohw" path="res://src/assets/Schoolbell-Regular.ttf" id="4_ikp8s"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50nvp"]
-bg_color = Color(0.6, 0.07058824, 0.07058824, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikp8s"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(102.42446, 100.92146, 310.98978, 376.6115)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7racn"]
-bg_color = Color(0.3341807, 0.6937383, 0.3502368, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0kndr"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(100.07007, 99.050446, 313.84308, 379.75018)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1iog"]
-bg_color = Color(0.05490196, 0.09803922, 0.6, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jxoh"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(805.93146, 99.19367, 308.13666, 379.46463)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikp8s"]
-bg_color = Color(0.62785405, 0.62219644, 0, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fp6li"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(806.21704, 102.18887, 310.7047, 376.61176)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jxoh"]
-bg_color = Color(0.51862377, 0.32696536, 0.14064741, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7qev"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1513.5046, 101.48702, 308.12207, 376.5991)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7qev"]
-bg_color = Color(0.6, 0.05490196, 0.6, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7kkt"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(1509.2257, 105.3273, 310.7047, 373.47333)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e32pt"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(449.29175, 102.04679, 313.84296, 376.6115)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ws5a7"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(451.57434, 95.912, 310.7047, 386.02704)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hkhm5"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1154.0117, 104.899895, 316.69604, 370.90524)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3y2hn"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(1157.7214, 102.18887, 313.84314, 376.61176)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7mpk"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(98.90268, 535.84534, 313.60727, 381.98975)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lohkn"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(100.07007, 541.5692, 310.70465, 379.75024)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1iog"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(439.79297, 527.07043, 337.97766, 406.33276)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u68jd"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(451.57434, 541.5692, 310.7047, 376.61182)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g67j4"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(802.0172, 535.4549, 315.9652, 382.8886)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cs01n"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(806.21704, 541.5692, 310.7047, 376.61182)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6nv3x"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1148.3062, 535.29236, 329.53528, 392.30396)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvmrh"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(1151.4446, 535.29236, 316.98157, 386.0271)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7auq"]
+texture = ExtResource("2_w1iog")
+region_rect = Rect2(1506.0873, 538.4308, 313.84314, 379.75024)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nelsi"]
+texture = ExtResource("3_ikp8s")
+region_rect = Rect2(1515.5026, 541.5692, 307.56628, 376.61182)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wq10o"]
-font = ExtResource("2_7racn")
+font = ExtResource("4_ikp8s")
 font_size = 100
 font_color = Color(0.96474224, 0.96474224, 0.9647421, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_w1iog"]
-font = ExtResource("2_7racn")
-font_size = 150
+font = ExtResource("4_ikp8s")
+font_size = 120
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_50nvp")
 
 [node name="Background" type="ColorRect" parent="."]
-offset_left = -47.0
-offset_top = -33.0
-offset_right = 1162.0
-offset_bottom = 661.0
+offset_left = -38.0
+offset_top = -29.0
+offset_right = 1171.0
+offset_bottom = 665.0
 color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
 
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="ButtonRed" type="Button" parent="Buttons"]
-offset_left = 188.0
-offset_top = 364.0
-offset_right = 387.0
-offset_bottom = 475.0
+offset_left = 74.0
+offset_top = 242.0
+offset_right = 250.0
+offset_bottom = 428.0
 theme_override_colors/font_outline_color = Color(0.81960785, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(1, 0.28627452, 0.03137255, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_50nvp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ikp8s")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0kndr")
 
 [node name="ButtonGreen" type="Button" parent="Buttons"]
-offset_left = 461.0
-offset_top = 365.0
-offset_right = 658.0
-offset_bottom = 476.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_7racn")
+offset_left = 79.0
+offset_top = 451.0
+offset_right = 255.0
+offset_bottom = 637.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5jxoh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fp6li")
 
 [node name="ButtonBlue" type="Button" parent="Buttons"]
-offset_left = 737.0
-offset_top = 364.0
-offset_right = 935.0
-offset_bottom = 477.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_w1iog")
+offset_left = 289.0
+offset_top = 450.0
+offset_right = 465.0
+offset_bottom = 636.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_n7qev")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w7kkt")
 
 [node name="ButtonYellow" type="Button" parent="Buttons"]
-offset_left = 191.0
-offset_top = 505.0
-offset_right = 386.0
-offset_bottom = 614.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ikp8s")
+offset_left = 499.0
+offset_top = 246.0
+offset_right = 675.0
+offset_bottom = 432.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_e32pt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ws5a7")
 
 [node name="ButtonBrown" type="Button" parent="Buttons"]
-offset_left = 462.0
-offset_top = 503.0
-offset_right = 662.0
-offset_bottom = 611.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_5jxoh")
+offset_left = 295.0
+offset_top = 245.0
+offset_right = 471.0
+offset_bottom = 431.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_hkhm5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3y2hn")
 
 [node name="ButtonViolette" type="Button" parent="Buttons"]
-offset_left = 738.0
-offset_top = 508.0
-offset_right = 938.0
-offset_bottom = 616.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n7qev")
+offset_left = 497.0
+offset_top = 448.0
+offset_right = 673.0
+offset_bottom = 634.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_g7mpk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lohkn")
+
+[node name="ButtonBlack" type="Button" parent="Buttons"]
+offset_left = 698.0
+offset_top = 243.0
+offset_right = 874.0
+offset_bottom = 438.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_w1iog")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u68jd")
+
+[node name="ButtonPink" type="Button" parent="Buttons"]
+offset_left = 702.0
+offset_top = 451.0
+offset_right = 878.0
+offset_bottom = 637.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_g67j4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cs01n")
+
+[node name="ButtonGray" type="Button" parent="Buttons"]
+offset_left = 903.0
+offset_top = 249.0
+offset_right = 1079.0
+offset_bottom = 435.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6nv3x")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cvmrh")
+
+[node name="ButtonOrange" type="Button" parent="Buttons"]
+offset_left = 898.0
+offset_top = 450.0
+offset_right = 1074.0
+offset_bottom = 636.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_k7auq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nelsi")
 
 [node name="UX" type="Node2D" parent="."]
 
 [node name="Label" type="Label" parent="UX"]
 offset_left = 150.0
-offset_top = 194.0
+offset_top = 114.0
 offset_right = 1002.0
-offset_bottom = 328.0
+offset_bottom = 248.0
 text = "000"
 label_settings = SubResource("LabelSettings_wq10o")
 horizontal_alignment = 1
@@ -112,3 +214,7 @@ horizontal_alignment = 1
 [connection signal="pressed" from="Buttons/ButtonYellow" to="." method="_on_button_yellow_pressed"]
 [connection signal="pressed" from="Buttons/ButtonBrown" to="." method="_on_button_brown_pressed"]
 [connection signal="pressed" from="Buttons/ButtonViolette" to="." method="_on_button_violette_pressed"]
+[connection signal="pressed" from="Buttons/ButtonBlack" to="." method="_on_button_black_pressed"]
+[connection signal="pressed" from="Buttons/ButtonPink" to="." method="_on_button_pink_pressed"]
+[connection signal="pressed" from="Buttons/ButtonGray" to="." method="_on_button_gray_pressed"]
+[connection signal="pressed" from="Buttons/ButtonOrange" to="." method="_on_button_orange_pressed"]

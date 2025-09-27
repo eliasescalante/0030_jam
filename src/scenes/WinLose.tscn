@@ -4,19 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://cpkj3i5j1tep2" path="res://src/assets/fondo portada 2.png" id="2_jrjj4"]
 [ext_resource type="Texture2D" uid="uid://dhua5oq81jfek" path="res://src/assets/fondo del menu.png" id="2_nppv5"]
 [ext_resource type="Texture2D" uid="uid://b3tm3rc3qkodp" path="res://src/assets/asset de iu.png" id="4_svy6j"]
-[ext_resource type="FontFile" uid="uid://cxwxe72qbdhqw" path="res://src/assets/LuFont-Regular.otf" id="4_w00u2"]
+[ext_resource type="FontFile" uid="uid://860eh15aohw" path="res://src/assets/Schoolbell-Regular.ttf" id="4_w00u2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jrjj4"]
-font_size = 50
-font_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
+font = ExtResource("4_w00u2")
+font_size = 100
+font_color = Color(0.5467368, 0.015650148, 0.44749337, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pxpl3"]
-font_size = 50
-font_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
+font = ExtResource("4_w00u2")
+font_size = 100
+font_color = Color(0.57799846, 0.0669562, 0.47034115, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nppv5"]
-font_size = 50
-font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+font = ExtResource("4_w00u2")
+font_size = 100
+font_color = Color(0.7096971, 0.11965998, 0.6060681, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w00u2"]
 texture = ExtResource("4_svy6j")
@@ -49,54 +52,56 @@ scale = Vector2(0.25579637, 0.14310148)
 texture = ExtResource("2_jrjj4")
 
 [node name="LabelHits" type="Label" parent="."]
-offset_left = 534.0
+offset_left = 290.0
 offset_top = 210.0
-offset_right = 574.0
-offset_bottom = 233.0
+offset_right = 862.0
+offset_bottom = 348.0
 text = "0"
 label_settings = SubResource("LabelSettings_jrjj4")
+vertical_alignment = 1
 
 [node name="LabelMisses" type="Label" parent="."]
-offset_left = 536.0
+offset_left = 304.0
 offset_top = 329.0
-offset_right = 576.0
-offset_bottom = 398.0
+offset_right = 806.0
+offset_bottom = 467.0
 text = "0"
 label_settings = SubResource("LabelSettings_pxpl3")
+horizontal_alignment = 1
 
 [node name="TItulo" type="Label" parent="."]
-offset_left = 458.0
-offset_top = 92.0
-offset_right = 616.0
-offset_bottom = 161.0
-text = "SCORE"
+offset_left = 398.0
+offset_top = 54.0
+offset_right = 685.0
+offset_bottom = 192.0
+text = "Puntaje"
 label_settings = SubResource("LabelSettings_nppv5")
 
 [node name="ux" type="Node2D" parent="."]
 
 [node name="PLAY" type="Button" parent="ux"]
-offset_left = 263.0
-offset_top = 514.0
-offset_right = 499.00003
-offset_bottom = 602.0
+offset_left = 261.0
+offset_top = 512.0
+offset_right = 568.0
+offset_bottom = 627.0
 theme_override_colors/font_color = Color(0.8745098, 0.015686275, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("4_w00u2")
-theme_override_font_sizes/font_size = 87
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_w00u2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ej6ld")
-text = "PLAY"
+text = "Jugar"
 
 [node name="CREDITS" type="Button" parent="ux"]
 offset_left = 605.0
 offset_top = 517.0
-offset_right = 946.0
-offset_bottom = 601.6608
+offset_right = 912.0
+offset_bottom = 632.0
 theme_override_colors/font_color = Color(0.8745098, 0.05490196, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("4_w00u2")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_gdsfs")
 theme_override_styles/hover = SubResource("StyleBoxTexture_guia7")
-text = "Credits
+text = "Créditos
 "
 
 [connection signal="pressed" from="ux/PLAY" to="." method="_on_play_pressed"]

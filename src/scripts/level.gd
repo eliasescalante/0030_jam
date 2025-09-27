@@ -2,7 +2,7 @@ extends Node2D
 
 var sequence = []        # Secuencia que genera la máquina
 var player_input = []    # Lo que presiona el jugador
-var colors = ["red", "green", "blue", "yellow", "brown", "violette"]
+var colors = ["red", "green", "blue", "yellow", "brown", "violette", "black", "pink", "gray", "orange"]
 var score_hits := 0
 var score_misses := 0
 var game_time := 30.0 # segundos
@@ -11,11 +11,16 @@ var time_left: float
 
 
 func _ready():
+	AudioManager.play_music()
 	time_left = game_time
 	start_game()
 	start_timer()
 
 func _process(delta: float) -> void:
+	
+	if not AudioManager.is_playing():
+		AudioManager.play_music()
+
 	if time_left > 0:
 		time_left -= delta
 		$UX/time.text = str(round(time_left))
@@ -38,17 +43,34 @@ func add_new_step():
 func show_sequence() -> void:
 	player_input.clear()
 	$UX/Label.text = "RECUERDA BIEN..."
-	await get_tree().create_timer(1).timeout
+	var initial_delay := 0.5
+	await get_tree().create_timer(initial_delay).timeout
+	
+	# Calculamos velocidad según el tiempo restante
+	# Si quedan menos de 20 segundos (es decir, después del segundo 10), la secuencia va más rápido
+	var highlight_time := 0.5
+	var between_colors := 0.4
+	# Aumentamos velocidad según el tiempo restante
+	if time_left <= 25.0:   # después del segundo 10
+		highlight_time = 0.2   # iluminar más rápido
+		between_colors = 0.1   # menos espera entre colores
+	elif time_left <= 10.0:  # después del segundo 20
+		highlight_time = 0.15
+		between_colors = 0.08
+	
+	
+	
+	
 	for color_id in sequence:
-		await highlight_button(color_id)
-		await get_tree().create_timer(0.4).timeout
+		await highlight_button(color_id, highlight_time)
+		await get_tree().create_timer(between_colors).timeout
 	$UX/Label.text = "TU TURNO"
 
-func highlight_button(color_id: int) -> void:
+func highlight_button(color_id: int, duration: float = 0.5) -> void:
 	var button = get_button_by_id(color_id)
 	var original = button.modulate
 	button.modulate = Color(2, 2, 2) # iluminar
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(duration).timeout
 	button.modulate = original
 
 func get_button_by_id(id: int) -> Node:
@@ -59,6 +81,10 @@ func get_button_by_id(id: int) -> Node:
 		3: return $Buttons/ButtonYellow
 		4: return $Buttons/ButtonBrown
 		5: return $Buttons/ButtonViolette
+		6: return $Buttons/ButtonBlack
+		7: return $Buttons/ButtonPink
+		8: return $Buttons/ButtonGray
+		9: return $Buttons/ButtonOrange
 		_: return null
 
 # -----------------------------
@@ -72,7 +98,8 @@ func handle_input(id: int):
 	var index = player_input.size() - 1
 	
 	if index >= sequence.size():
-		$UX/Label.text = "¡FALLASTE!"
+		$UX/Label.text = "FALLASTE"
+		AudioManager.play_sfx_no()
 		GameState.misses += 1
 		# Reinicia solo si es la primera instrucción
 		if sequence.size() == 1:
@@ -81,7 +108,8 @@ func handle_input(id: int):
 		return
 	
 	if player_input[index] != sequence[index]:
-		$UX/Label.text = "¡FALLASTE!"
+		$UX/Label.text = "FALLASTE"
+		AudioManager.play_sfx_no()
 		GameState.misses += 1
 		# Reinicia solo si es la primera instrucción
 		if sequence.size() == 1:
@@ -91,6 +119,7 @@ func handle_input(id: int):
 
 	if player_input.size() == sequence.size():
 		$UX/Label.text = "¡ACERTASTE!"
+		AudioManager.play_sfx_si()
 		GameState.hits += 1
 		await get_tree().create_timer(1).timeout
 		add_new_step()
@@ -100,6 +129,7 @@ func start_timer():
 	end_game()
 
 func end_game():
+	AudioManager.stop_music()
 	get_tree().change_scene_to_file("res://src/scenes/WinLose.tscn")
 
 # -----------------------------
@@ -122,3 +152,15 @@ func _on_button_brown_pressed():
 
 func _on_button_violette_pressed():
 	handle_input(5)
+
+func _on_button_black_pressed() -> void:
+	handle_input(6)
+
+func _on_button_pink_pressed() -> void:
+	handle_input(7)
+
+func _on_button_gray_pressed() -> void:
+	handle_input(8)
+
+func _on_button_orange_pressed() -> void:
+	handle_input(9)
